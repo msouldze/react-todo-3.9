@@ -1,4 +1,4 @@
-export default function NewTaskForm({ todos, setTodos }) {
+export default function NewTaskForm({ todos = [], setTodos }) {
     const nextId = todos[todos.length - 1].id;
 
     function addTodo(event) {

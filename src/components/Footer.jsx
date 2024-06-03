@@ -2,7 +2,7 @@ import '../styles/Footer.css'
 import TasksFilter from "./TasksFilter"
 
 
-export default function Footer({ todos, setTodos }) {
+export default function Footer({ todos = [], setTodos }) {
     const activeTodos = todos.filter(todo => !todo.completed);
 
     function handleDelete() {

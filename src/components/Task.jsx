@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import TasksEdit from "./TasksEdit";
 import dateFormatter from "../utils/utils";
 
-function Task({todo, onDelete, onChange, onChecked }) {
+function Task({todo = {}, onDelete, onChange, onChecked }) {
     const {id, title, completed, time = new Date(2024, 4, 0, 13, 48, 15)} = todo;
     const [statusState, setStatusState] = useState('');
 

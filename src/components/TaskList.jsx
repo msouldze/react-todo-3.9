@@ -2,7 +2,7 @@ import '../styles/TaskList.css';
 import Task from "./Task";
 import { useFiltersContext } from './FilterProvider';
 
-function TaskList({ todos, setTodos }) {
+function TaskList({ todos = {}, setTodos }) {
     const { filterMethods, filters } = useFiltersContext();
 
     const filter = Object.keys(filters).filter(btn => filters[btn])
